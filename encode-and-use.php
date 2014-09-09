@@ -1,8 +1,8 @@
 <?php
-//array de frutas
+// fruits array
 	$fruits = ['apple','pear','banana','watermelon','mango'];
 	$jsonFruits =  json_encode($fruits);
-//associative array de fruta y color
+// associative array  key:value for fruits and color
 	$fruitColor= array(
 		"apple"=>"red",
 		"orange"=>"orange",
@@ -10,8 +10,8 @@
 		"mango"=>"orange"
 		);
 	$fruitColor = json_encode($fruitColor);
-
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,25 +21,23 @@
 <body>
 	
 	<script>
-//imprimiendo como array
+//print array
 		var frutasArray = <?php echo $jsonFruits; ?>;
-	//accesando solo uno
+	//print one
 		document.write(frutasArray[0]);
 			document.write('<br />');
-	//imprimiendo todo el array
+	//print entire array
 		document.write(frutasArray);
 				document.write('<br />');
 
 //convert string to object
 		var frutasObject = JSON.parse('<?php echo $fruitColor; ?>');
-	//accessando solo uno 
+	//accessing one
 		document.write(frutasObject.apple);
 				document.write('<br />');
 		document.write(frutasObject['apple']);
 				document.write('<br />');
 
-	//imprimiendo todo el objeto
 	</script>
 </body>
-
 </html>
