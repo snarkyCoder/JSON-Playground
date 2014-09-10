@@ -5,7 +5,7 @@ How to Handle JSON Objects
 
   
 ### JSON and PHP in the Same Page
-> ###[encode-and-use.php ](https://github.com/miguel-velazkez/JSON-Playground/blob/master/encode-and-use.php)
+> ###[encode-and-use.php ](https://github.com/miguel-velazkez/JSON-Playground/blob/master/encode-and-use/)
 > 1. Encode JSON strings with PHP
 > 2. Print JSON string in script tag
 > 3. Convert to JSON Object with JSON.parse
