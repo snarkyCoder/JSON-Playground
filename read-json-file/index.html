@@ -5,11 +5,14 @@
 	<title>Read Json File</title>
 </head>
 <body>
+<a href=""></a>
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script>
 	$.getJSON('http://localhost/jsonplayground/read-json-file/sg-shows-export.json', function(data) {
     for (var i = 0; i <= data.length-1; i++) {
-    	 document.write("<h1>"+data[i].title+"</h1><br/>");
+        document.write("<h1>"+data[i].title+"</h1>");
+        document.write("<a href=http://www.imdb.com/title/"+data[i].imdb_id+" target='_blank'>IMDB</a>")
+
     		document.write("<ul>");
     			for (var j = 0; j<= data[i].seasons.length-1; j ++) {
 

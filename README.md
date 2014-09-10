@@ -1,7 +1,7 @@
 How to Handle JSON Objects       
 ==========================      
 
-**Handling JSON in Js, Ajax and PHP**  
+**Handling JSON in JavaScript, AJAX and PHP**  
 
   
 ###[Encode Json with PHP and use with JS in Same Page](https://github.com/miguel-velazkez/JSON-Playground/blob/master/encode-and-use/)
