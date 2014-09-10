@@ -11,5 +11,5 @@ How to Handle JSON Objects
 > 4. Use JSON Object in DOM
 
 ###[Read external JSON File with AJAX](https://github.com/miguel-velazkez/JSON-Playground/tree/master/read-json-file)
->1.Get JSON File with ajax
->2.Iterate JSON data with for loops to get specific data
+> 1. Get JSON File with ajax
+> 2. Iterate JSON data with for loops to get specific data
