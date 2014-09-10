@@ -20,7 +20,7 @@
 </head>
 <body>
 	
-	<script>
+	<script type="text/javascript">
 //print array
 		var frutasArray = <?php echo $jsonFruits; ?>;
 	//print one
