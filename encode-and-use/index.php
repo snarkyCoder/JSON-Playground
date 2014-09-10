@@ -11,7 +11,6 @@
 		);
 	$fruitColor = json_encode($fruitColor);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,24 +18,26 @@
 	<title>Generando y Usando JSON</title>
 </head>
 <body>
-	
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript">
 //print array
 		var frutasArray = <?php echo $jsonFruits; ?>;
 	//print one
-		document.write(frutasArray[0]);
-			document.write('<br />');
+		document.write(frutasArray[0] + "<br/>");
 	//print entire array
-		document.write(frutasArray);
-				document.write('<br />');
+		document.write(frutasArray+"<br/>");
 
 //convert string to object
 		var frutasObject = JSON.parse('<?php echo $fruitColor; ?>');
 	//accessing one
-		document.write(frutasObject.apple);
-				document.write('<br />');
-		document.write(frutasObject['apple']);
-				document.write('<br />');
+		document.write(frutasObject.apple +"<br/>");
+
+		document.write(frutasObject['apple']+"<br/>");
+		
+	// 
+	$.each( frutasObject, function( key, value ) {
+		document.write( key + ": " + value + "<br/>");
+	});
 
 	</script>
 </body>
