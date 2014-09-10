@@ -34,7 +34,7 @@
 
 		document.write(frutasObject['apple']+"<br/>");
 		
-	// 
+	// using jQuery to access each key and its value
 	$.each( frutasObject, function( key, value ) {
 		document.write( key + ": " + value + "<br/>");
 	});
