@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Read JSON File with Angular</title>
+<style>
+	body{font-family:sans-serif;}
+</style>
+</head>
+<body ng-app ="showsApp">
+<div ng-controller="ShowListCtrl">
+	<div ng-repeat="show in shows">
+	<h1>{{show.title}}</h1>
+		<ul>
+			<li ng-repeat="season in show.seasons">Season : {{season.season}}
+				<ul>
+					<li ng-repeat="episode in season.episodes">
+						{{episode.title}}
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script>
+	'use strict';
+	var showsApp = angular.module('showsApp', []);
+
+	showsApp.controller('ShowListCtrl', function ($scope, $http) {
+	  $http.get('shows-data.json').success(function(data) {
+	    $scope.shows = data;
+	  });
+	});	
+</script>
+</body>
+</html>
