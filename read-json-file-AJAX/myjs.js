@@ -21,7 +21,7 @@ $.getJSON('http://localhost/jsonplayground/read-json-file-AJAX/shows-info.json',
     theList.innerHTML = myList;
 });
     $('#showList').on("click",".season",function(){
-
+        
                 $(this).siblings().children("ul").slideUp();
                 $(this).children("ul").slideToggle();
     });
