@@ -5,10 +5,13 @@
 	<title>Read JSON File with Angular</title>
 <style>
 	body{font-family:sans-serif;}
+	[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 </style>
 </head>
 <body ng-app ="showsApp">
-<div ng-controller="ShowListCtrl">
+<div ng-controller="ShowListCtrl" ng-cloak>
 	<div ng-repeat="show in shows">
 	<h1>{{show.title}}</h1>
 		<ul>
@@ -28,7 +31,7 @@
 	var showsApp = angular.module('showsApp', []);
 
 	showsApp.controller('ShowListCtrl', function ($scope, $http) {
-	  $http.get('shows-data.json').success(function(data) {
+	  $http.get('show-data.json').success(function(data) {
 	    $scope.shows = data;
 	  });
 	});	
