@@ -26,15 +26,6 @@
 	</div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
-<script>
-	'use strict';
-	var showsApp = angular.module('showsApp', []);
-
-	showsApp.controller('ShowListCtrl', function ($scope, $http) {
-	  $http.get('show-data.json').success(function(data) {
-	    $scope.shows = data;
-	  });
-	});	
-</script>
+<script src="myjs.js"></script>
 </body>
 </html>
